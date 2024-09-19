@@ -1,0 +1,45 @@
+:root {
+    /*font*/
+    --text-base: 1.125rem;
+    --text-lg: 1.875rem;
+    --text-xl: 2.625rem;
+    --text-2xl: 3.375rem;
+
+    --font-semibold: 600;
+    --font-bold: 700;
+
+    --text-center: center;
+    --text-justify: justify;
+    --text-left: left;
+    --text-right: right;
+
+    --line-height-normal: 2;
+    --line-height-space: 3;
+
+    --white-space-normal: normal;
+
+    /*spacing*/
+    --p-1: 0.625rem;
+    --p-2: 1.25rem;
+
+    /*border*/
+    --border-round-1: 0.5rem;
+    --border-round-2: 1.875rem;
+    --border-circle: 50%;
+
+    /*box shadow*/
+    --shadow-none: none;
+    --shadow-light: 0px 4px 10px rgba(0, 0, 0, 0.03), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.12);
+    --shadow-normal: 0px 1px 10px rgba(0, 0, 0, 0.12), 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 2px 4px -1px rgba(0, 0, 0, 0.2);
+    --shadow-dark: 0px 7px 30px rgba(0, 0, 0, 0.08), 0px 22px 30px 2px rgba(0, 0, 0, 0.15), 0px 8px 10px rgba(0, 0, 0, 0.15);
+    --shadow-xdark: 0px 9px 46px 8px rgba(0, 0, 0, 0.12), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 11px 15px rgba(0, 0, 0, 0.2);
+
+    --opacity-light: .1;
+    --opacity-medium: .4;
+    --opacity-dark: .7;
+
+    /*cursor*/
+    --cursor-pointer: pointer;
+    --cursor-wait: wait;
+    --cursor-move: move;
+}

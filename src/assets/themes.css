@@ -1,0 +1,7 @@
+
+.profile-image-normal {
+    width: 21.875rem;
+    height: 21.875rem;
+    border-radius: var(--border-round-1);
+    object-fit: cover;
+}
