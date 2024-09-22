@@ -82,7 +82,7 @@ export default {
             value: 'Submit'
           },
           onClick: () => {
-            console.log("Sumbitted!")
+            console.log("Submitted!")
           }
 
         },

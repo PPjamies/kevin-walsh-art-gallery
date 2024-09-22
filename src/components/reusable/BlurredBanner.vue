@@ -8,7 +8,7 @@ export default {
 </script>
 
 <template>
-  <div class="banner-container">
+  <div class="blurred-banner-container">
       <img class="blurred-background"
            :alt=$props.alt
            :src=$props.url>
@@ -20,7 +20,7 @@ export default {
 
 <style scoped>
 
-.banner-container {
+.blurred-banner-container {
   position: relative;
   min-width: 600px;
   min-height: 600px;
