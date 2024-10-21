@@ -12,7 +12,7 @@ export default {
 
 <template>
   <div class="about-me-container">
-    <img class="sticky-image profile-image-normal"
+    <img class="sticky-image profile-image"
          :alt="alt"
          :src="url"/>
     <div class="info-section">
@@ -30,6 +30,13 @@ export default {
 .sticky-image {
   position: sticky;
   top: 20px;
+}
+
+.profile-image {
+  height: 21.875rem;
+  width: 21.875rem;
+  border-radius: var(--border-round-1);
+  object-fit: cover;
 }
 
 .info-section {

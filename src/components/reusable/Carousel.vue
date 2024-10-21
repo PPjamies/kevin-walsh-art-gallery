@@ -1,53 +1,72 @@
 <script>
 
-import BlurredBanner from "@/components/reusable/BlurredBanner.vue";
-import Carousel from "primevue/carousel";
+import CarouselSlide from "@/components/home/CarouselSlide.vue";
 
 export default {
-  components: {BlurredBanner, Carousel},
+  components: {CarouselSlide},
+  props: {
+    slides: {
+      type: Array,
+      default: null
+    }
+  },
   data() {
     return {
-      items: [
-        {
-          url: "src\\assets\\dragonfruit.png",
-          alt: "dragonfruit"
-        },
-        {
-          url: "src\\assets\\kiwi.png",
-          alt: "kiwi"
-        },
-        {
-          url: "src\\assets\\mango.png",
-          alt: "mango"
-        },
-        {
-          url: "src\\assets\\pineapple.png",
-          alt: "pineapple"
-        }
-      ]
-    };
+      index: 0
+    }
+  },
+  methods: {
+    prevSlide() {
+      this.index = (this.index + 1) % this.slides.length
+    },
+    nextSlide() {
+      this.index = (this.index - 1 + this.slides.length) % this.slides.length
+    },
+    selectSlide(index) {
+      this.index = index
+    }
   }
-};
+}
 </script>
 
 <template>
-  <Carousel
-      :value="this.items"
-      :numScroll="1"
-      :num-visible="1"
-      circular
-      :autoplayInterval="7000"
-      :show-navigators="false"
-      class="custom-carousel"
-  >
-    <template #item="slotProps">
-      <BlurredBanner :url="slotProps.data.url" :alt="slotProps.data.alt"/>
-    </template>
-  </Carousel>
+  <div class="carousel">
+    <div class="carousel-track">
+      <div class="carousel-slide" v-for="(slide, index) in slides" :key="index">
+        <component :is="slide.component" v-bind="slide.props"/>
+      </div>
+
+      <div class="carousel-nav">
+        <button @click="prevSlide">&larr;</button>
+        <button @click="nextSlide">&rarr;</button>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style scoped>
-.custom-carousel {
-  transition: opacity 1s ease-in-out;
+
+.carousel-track {
+  display: flex;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel-nav {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+}
+
+.carousel-slide {
+  padding: 0 var(--p-1) 0 var(--p-1);
+}
+
+.carousel-nav button {
+  padding: var(--p-2);
+  font-size: var(--text-base);
+  color: var(--gray-100);
+  border: none;
+  background: none;
+  cursor: var(--cursor-pointer);
 }
 </style>
