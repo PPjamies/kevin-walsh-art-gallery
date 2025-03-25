@@ -1,5 +1,9 @@
 import React from 'react';
+
 import Navbar from "../navbar/Navbar.tsx";
+import HeroBanner from "../herobanner/HeroBanner.tsx";
+
+import {Content, MenuItem} from "../types.tsx";
 
 const Header = () => {
     let logo: string = 'src/assets/img/logoipsum.svg';
@@ -31,13 +35,27 @@ const Header = () => {
             path: '/signup'
         }
     ];
+    let background: Content = {
+        type: 'img',
+        src: 'src/assets/img/banner-pawel-czerwinski.jpg'
+    };
 
     return (
-        <Navbar
-            logo={logo}
-            navItems={navItems}
-            authItems={authItems}
-        />
+        <div className={'relative'}>
+            <div className={'absolute z-3'}>
+                <Navbar
+                    logo={logo}
+                    navItems={navItems}
+                    authItems={authItems}
+                />
+            </div>
+            <div className={'absolute top-0 left-0 w-full h-full z-0'}>
+                <HeroBanner
+                    title={'test'}
+                    subtitle={'testing...'}
+                    background={background}/>
+            </div>
+        </div>
     );
 };
 
