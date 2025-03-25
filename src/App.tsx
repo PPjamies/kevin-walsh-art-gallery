@@ -1,3 +1,12 @@
-export default function App() {
-    return <h1>Hello, Vite + React + TypeScript!</h1>;
-};
+import React from 'react';
+import AppRouter from './routes/AppRouter.tsx';
+
+function App() {
+    return (
+        <div>
+            <AppRouter/>
+        </div>
+    );
+}
+
+export default App;
