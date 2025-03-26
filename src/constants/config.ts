@@ -1,9 +1,10 @@
 import {Contact, Social} from "../types.tsx";
+import instagramIcon from '../assets/icons/icons8-instagram.svg';
 
 export const SITE_SOCIALS: Social[] = [
     {
         name: 'Instagram',
-        icon: 'instagram-icon-url',
+        icon: `${instagramIcon}`,
         link: 'https://instagram.com'
     }
 ];

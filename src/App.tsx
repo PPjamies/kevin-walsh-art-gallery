@@ -1,9 +1,9 @@
 import React from 'react';
 import {BrowserRouter} from 'react-router-dom';
 
-import Header from "./components/Header.tsx";
-import AppRouter from './routes/AppRouter.tsx';
-import Footer from "./components/Footer.tsx";
+import Header from './components/header/Header'
+import AppRouter from './routes/AppRouter';
+import Footer from './components/footer/Footer';
 
 function App() {
     return (
