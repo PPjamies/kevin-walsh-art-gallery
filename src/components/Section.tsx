@@ -9,7 +9,7 @@ type Props = {
 
 const Section: React.FC<Props> = ({title, description, children, className}) => {
     return (
-        <div className={`${className}`}>
+        <div className={`flex flex-col items-center p-20 ${className}`}>
             <h1 className={'text-4xl mb-5'}>{title}</h1>
             <p className={'text-lg mb-13'}>{description}</p>
             {children}

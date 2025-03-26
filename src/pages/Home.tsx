@@ -41,7 +41,7 @@ const Home = () => {
             <Section
                 title={'Explore My Galleries'}
                 description={'Take your time and explore the many galleries I\'ve personally crafted over the years.'}
-                className={'flex flex-col items-center bg-pink-400 p-20'}
+                className={'bg-pink-400'}
             >
                 <div className={'flex flex-row justify-center gap-14 bg-amber-500'}>
                     {series.map((item, index) => (
@@ -59,6 +59,23 @@ const Home = () => {
                 </div>
             </Section>
 
+            {/* Gallery Display */}
+            <Section
+                title={'Introduction'}
+                description={'Hi! My name is Papa Johns'}
+                className={'bg-green-700'}
+            >
+
+            </Section>
+
+            {/* Contact */}
+            <Section
+                title={'Let\'s Connect!'}
+                description={'Hi! My name is Papa Johns'}
+                className={'bg-purple-900'}
+            >
+
+            </Section>
         </div>
     )
 };
