@@ -13,7 +13,7 @@ type Props = {
 const HoverCard: React.FC<Props> = ({alt, src, title, description, cta, ctaLink}) => {
     return (
         <div
-            className={'w-[20rem] h-[30rem] rounded-[10px] overflow-hidden cursor-pointer relative text-gray-900 shadow-[0_10px_30px_5px_rgba(0,0,0,0.2)] card'}>
+            className={'w-[20rem] h-[30rem] rounded-[10px] overflow-hidden cursor-pointer relative bg-white shadow-[0_10px_30px_5px_rgba(0,0,0,0.2)] card'}>
 
             <img
                 src={src}
