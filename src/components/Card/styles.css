@@ -1,0 +1,18 @@
+.card {
+
+    &:hover h1 {
+        inset: auto auto 275px 30px;
+        transition: inset .3s ease-out;
+    }
+
+    &:hover p, &:hover a {
+        opacity: 1;
+        transition: opacity .5s .1s ease-in;
+    }
+
+    &:hover img {
+        transition: opacity .3s ease-in;
+        opacity: 1;
+    }
+
+}

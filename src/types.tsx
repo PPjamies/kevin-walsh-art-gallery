@@ -27,3 +27,13 @@ export type Contact = {
     address?: string;
     socials?: Social[];
 };
+
+export type Art = {
+    alt: string;
+    src: string;
+    title: string;
+    description: string;
+    dimensions: string;
+    price: string;
+    isSold: boolean;
+}
