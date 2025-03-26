@@ -1,8 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {NAV_ITEMS} from '../../constants/menuItems';
-import {SITE_SOCIALS} from '../../constants/config';
-import logo from '../../assets/logoipsum.svg';
+import {NAV_ITEMS} from '../constants/menuItems.ts';
+import {SITE_SOCIALS} from '../constants/config.ts';
+import logo from '../assets/logoipsum.svg';
 
 const FooterNavbar = () => {
     return (

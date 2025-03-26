@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import Navbar from './Navbar';
-import HeroBanner from './HeroBanner';
-import {Content} from '../../types';
-import {AUTH_ITEMS, NAV_ITEMS} from '../../constants/menuItems';
-import logo from '../../assets/logoipsum.svg';
-import bannerImg from '../../assets/banner-pawel-czerwinski.jpg';
+import Navbar from '../components/Navbar.tsx';
+import HeroBanner from '../components/HeroBanner.tsx';
+import {Content} from '../types.tsx';
+import {AUTH_ITEMS, NAV_ITEMS} from '../constants/menuItems.ts';
+import logo from '../assets/logoipsum.svg';
+import bannerImg from '../assets/banner-pawel-czerwinski.jpg';
 
 const Header = () => {
     const [content, setContent] = useState<Content>({

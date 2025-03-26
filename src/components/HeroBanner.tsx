@@ -1,5 +1,5 @@
 import React from 'react';
-import {Content} from "../../types.tsx";
+import {Content} from '../types.tsx';
 
 type Props = {
     content: Content;

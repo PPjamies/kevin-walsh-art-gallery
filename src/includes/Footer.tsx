@@ -1,6 +1,6 @@
 import React from 'react';
-import FooterNavbar from './FooterNavbar';
-import Copyright from './Copyright';
+import FooterNavbar from '../components/FooterNavbar';
+import Copyright from '../components/Copyright';
 
 const Footer = () => {
     return (

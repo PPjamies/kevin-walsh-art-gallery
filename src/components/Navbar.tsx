@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {MenuItem} from '../../types';
+import {MenuItem} from '../types.tsx';
 
 type Props = {
     logo: string;

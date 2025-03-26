@@ -1,5 +1,5 @@
 import React from 'react';
-import {SITE} from '../../constants/config';
+import {SITE} from '../constants/config.ts';
 
 const Copyright = () => {
     return (
