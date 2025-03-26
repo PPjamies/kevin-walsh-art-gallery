@@ -1,14 +1,14 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {MenuItem} from '../types.tsx';
+
+import logo from '../assets/logoipsum.svg';
+import {AUTH_ITEMS, NAV_ITEMS} from "../constants/menuItems.ts";
 
 type Props = {
-    logo: string;
-    navItems: MenuItem[];
-    authItems?: MenuItem[];
+    hasAuth?: boolean
 }
 
-const Navbar: React.FC<Props> = ({logo, navItems, authItems = null}) => {
+const Navbar: React.FC<Props> = ({hasAuth = false}) => {
     return (
         <div className={'flex justify-between place-items-center px-2 py-2 bg-gray-900 text-white'}>
 
@@ -23,7 +23,7 @@ const Navbar: React.FC<Props> = ({logo, navItems, authItems = null}) => {
             {/* Menu Items */}
             <div>
                 <ul className={'flex flex-row gap-5'}>
-                    {navItems.map((item, index) => (
+                    {NAV_ITEMS.map((item, index) => (
                         <li
                             key={index}
                             className={'cursor-pointer shadow-2xl ' +
@@ -36,9 +36,9 @@ const Navbar: React.FC<Props> = ({logo, navItems, authItems = null}) => {
 
             {/* Auth Items */}
             <>
-                {authItems && (
+                {hasAuth && (
                     <div className={'flex flex-row gap-5'}>
-                        {authItems.map((item, index) => (
+                        {AUTH_ITEMS.map((item, index) => (
                             <div className={'cursor-pointer shadow-2xl hover:text-gray-400'}>
                                 <Link to={item.path}>{item.label}</Link>
                             </div>

@@ -2,8 +2,6 @@ import React, {useEffect, useState} from 'react';
 import Navbar from '../components/Navbar.tsx';
 import HeroBanner from '../components/HeroBanner.tsx';
 import {Content} from '../types.tsx';
-import {AUTH_ITEMS, NAV_ITEMS} from '../constants/menuItems.ts';
-import logo from '../assets/logoipsum.svg';
 import bannerImg from '../assets/banner-pawel-czerwinski.jpg';
 
 const Header = () => {
@@ -25,11 +23,7 @@ const Header = () => {
 
     return (
         <div>
-            <Navbar
-                logo={logo}
-                navItems={NAV_ITEMS}
-                authItems={AUTH_ITEMS}
-            />
+            <Navbar/>
             <HeroBanner content={content}/>
         </div>
     );

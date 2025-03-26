@@ -6,17 +6,6 @@ type Props = {
 }
 
 const HeroBanner: React.FC<Props> = ({content}) => {
-
-    const displayContent = (content: Content) => {
-        return (
-            <div
-                className="absolute z-0 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white px-6">
-                <h1 className="text-4xl font-bold">{content.title}</h1>
-                <p className="mt-4 text-lg">{content.subtitle}</p>
-            </div>
-        );
-    }
-
     return (
         <div className={'w-full max-h-[60vh]'}>
             <div className={'relative'}>
@@ -33,7 +22,11 @@ const HeroBanner: React.FC<Props> = ({content}) => {
                     </>
                 )}
 
-                {displayContent(content)}
+                <div
+                    className="absolute z-0 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white px-6">
+                    <h1 className="text-4xl font-bold">{content.title}</h1>
+                    <p className="mt-4 text-lg">{content.subtitle}</p>
+                </div>
 
             </div>
         </div>
