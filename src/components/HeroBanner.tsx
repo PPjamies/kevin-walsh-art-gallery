@@ -18,7 +18,7 @@ const HeroBanner: React.FC<Props> = ({content}) => {
     }
 
     return (
-        <div className={'absolute w-full max-h-[60vh]'}>
+        <div className={'w-full max-h-[60vh]'}>
             <div className={'relative'}>
 
                 {content.type === 'img' ? (
