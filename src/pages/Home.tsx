@@ -5,6 +5,7 @@ import {Art} from '../types.tsx';
 
 import image from '../assets/temp/img.png';
 import image1 from '../assets/temp/img_1.png';
+import Section from "../components/Section.tsx";
 
 const Home = () => {
     const [series, setSeries] = useState<Art[]>([
@@ -35,22 +36,29 @@ const Home = () => {
 
     return (
         <div>
-            HOME PAGE
 
-            <div className={'flex flex-row justify-center gap-14 bg-amber-500'}>
-                {series.map((item, index) => (
-                    <Card>
-                        <HoverCard
-                            key={index}
-                            alt={item.alt}
-                            src={item.src}
-                            title={item.title}
-                            description={item.description}
-                            cta={'Find out more'}
-                            ctaLink={'#'}/>
-                    </Card>
-                ))}
-            </div>
+            {/* Gallery Display */}
+            <Section
+                title={'Explore My Galleries'}
+                description={'Take your time and explore the many galleries I\'ve personally crafted over the years.'}
+                className={'flex flex-col items-center bg-pink-400 p-20'}
+            >
+                <div className={'flex flex-row justify-center gap-14 bg-amber-500'}>
+                    {series.map((item, index) => (
+                        <Card>
+                            <HoverCard
+                                key={index}
+                                alt={item.alt}
+                                src={item.src}
+                                title={item.title}
+                                description={item.description}
+                                cta={'Find out more'}
+                                ctaLink={'#'}/>
+                        </Card>
+                    ))}
+                </div>
+            </Section>
+
         </div>
     )
 };
